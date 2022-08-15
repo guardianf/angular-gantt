@@ -10,4 +10,3 @@ selenium-debug.log
 *.log
 *.map
 /src/docs/_build/
-dist/
