@@ -1,9 +1,9 @@
 /*!
- * Project: angular-gantt v2.0.0-rc.1 - Gantt chart component for AngularJS
- * Authors: Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com), Marco Schweighauser
+ * Project: @yubin.fu/angular-gantt v2.0.0-rc.1 - Gantt chart component for AngularJS
+ * Authors: Yubin Fu <578248377@qq.com> (http://www.fuyubin.top/), 
  * License: MIT
  * Homepage: https://www.angular-gantt.com
- * Github: https://github.com/angular-gantt/angular-gantt.git
+ * Github: https://github.com/guardianf/angular-gantt.git
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -4819,8 +4819,8 @@ var Gantt = exports.Gantt = function () {
             'dateFrames': [],
             'timeFramesWorkingMode': 'hidden',
             'timeFramesNonWorkingMode': 'visible',
-            'taskLimitThreshold': 100,
-            'columnLimitThreshold': 500
+            'taskLimitThreshold': null,
+            'columnLimitThreshold': null
         });
         this.api = new _api.GanttApi(this);
         this.api.registerEvent('core', 'ready');
@@ -5014,7 +5014,9 @@ var Gantt = exports.Gantt = function () {
             var magnetValueAndUnit = this.getMagnetValueAndUnit();
             var magnetValue = magnetValueAndUnit[0];
             var magnetUnit = magnetValueAndUnit[1];
-            return column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
+            var magnetDate = column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'));
+            console.log('getMagnetDate' + magnetDate);
+            return magnetDate;
         }
     }, {
         key: 'getDateByPosition',

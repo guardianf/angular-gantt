@@ -2,10 +2,8 @@
   "name": "@yubin.fu/angular-gantt",
   "version": "2.0.0-rc.1",
   "description": "Gantt chart component for AngularJS",
-  "author": "Rémi Alvergnat <toilal.dev@gmail.com> (https://www.pragmasphere.com)",
-  "contributors": [
-    "Marco Schweighauser"
-  ],
+  "author": "Yubin Fu <578248377@qq.com> (http://www.fuyubin.top/)",
+  "contributors": [],
   "license": "MIT",
   "repository": {
     "type": "git",
