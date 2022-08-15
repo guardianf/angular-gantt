@@ -79,8 +79,8 @@ export class Gantt {
       'dateFrames': [],
       'timeFramesWorkingMode': 'hidden',
       'timeFramesNonWorkingMode': 'visible',
-      'taskLimitThreshold': 100,
-      'columnLimitThreshold': 500
+      'taskLimitThreshold': null,
+      'columnLimitThreshold': null
     })
 
     this.api = new GanttApi(this)
@@ -314,8 +314,10 @@ export class Gantt {
 
     let magnetValue = magnetValueAndUnit[0]
     let magnetUnit = magnetValueAndUnit[1]
+    const magnetDate = column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'))
+    console.log(`getMagnetDate${magnetDate}`);
 
-    return column.getMagnetDate(date, magnetValue, magnetUnit, this.options.value('timeFramesMagnet'))
+    return magnetDate
   }
 
   // Returns the exact column date at the given position x (in em)

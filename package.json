@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular-gantt/angular-gantt.git"
+    "url": "https://github.com/guardianf/angular-gantt.git"
   },
   "homepage": "https://www.angular-gantt.com",
   "bugs": "https://github.com/angular-gantt/angular-gantt/issues",
